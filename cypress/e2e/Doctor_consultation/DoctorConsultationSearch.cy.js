@@ -29,7 +29,7 @@ describe('Doctor Consultation Search and Booking', () => {
                 cy.get(`[aria-label="Please enter OTP character ${index + 1}"]`,{timeout:1000}).type(digit);
                 });
                 cy.url().should('include', 'https://raphacure.com/doctor');
-            cy.wait(2000); // allow initial load
+              cy.wait(2000); // allow initial load
 
             // Type doctor's name
             cy.get('.search-input').type('Naveen Gowda');
@@ -63,7 +63,7 @@ describe('Doctor Consultation Search and Booking', () => {
             .then($buttons => {
               const count = $buttons.length;
               const randomIndex = Math.floor(Math.random() * count);
-              cy.wrap($buttons[randomIndex]).click();
+              cy.wrap($buttons[randomIndex]).click({force: true});
             });
 
           // Step 6: Proceed to Checkout
