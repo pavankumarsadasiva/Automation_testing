@@ -3,7 +3,7 @@
 pipeline {
     agent any
     environment {
-        // NODE_ENV = 'production'
+        NODE_ENV = 'staging'
     }
     stages {
         stage('Clone Repository') {
@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps { 
-                bat 'npm install'
+                bat 'npm install --production=false'
             }
         }
         stage('Deploy') {
