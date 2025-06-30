@@ -3,10 +3,7 @@
 describe("Locaton", () => {
   it("location", () => {
     cy.visit("https://raphacure.com");
-
-
-
-    // Click on the location icon
+    // Select location
     cy.get(".header-left-sec4").click();
    
     // Wait for input field to appear
