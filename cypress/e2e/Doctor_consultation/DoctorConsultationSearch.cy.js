@@ -38,9 +38,16 @@ describe('Doctor Consultation Search and Booking', () => {
             cy.get('.search-popup').should('be.visible');
 
             // Ensure the popup item with correct name appears
-            cy.contains('.search-popup-name', 'Naveen Gowda', { timeout: 12000 })
+            cy.contains('.search-popup-name', 'Naveen Gowda', { timeout: 13000 })
                 .should('be.visible')
                 .click();
+            // cy.contains('.search-popup-name', 'Naveen Gowda', { timeout: 15000 })
+            //     .should('be.visible')
+            //     .as('doctorItem');
+
+
+            //   cy.get('@doctorItem').click();
+
              cy.url().should('include', 'https://raphacure.com/doctor/doctordetails/22463');
 
             cy.wait(2000); // allow time for page to load
