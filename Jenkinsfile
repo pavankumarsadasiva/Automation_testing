@@ -16,11 +16,12 @@ pipeline {
                 bat 'npm install --production=false'
             }
         }
-        stage('Deploy') {
+        stage('Run DoctorConsultationSearch File Tests') {
             steps {
-                bat 'npm run start'
+                bat 'npx cypress run --spec "Automation_testing/cypress/e2e/Doctor_consultation/DoctorConsultationSearch.cy.js"'
             }
         }
+
     }
 }
    
