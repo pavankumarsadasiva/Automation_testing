@@ -26,7 +26,7 @@ describe('Doctor Consultation Search and Booking', () => {
                 cy.get('.modalBodyDefault').should('be.visible');
 
                 otp.forEach((digit, index) => {
-                cy.get(`[aria-label="Please enter OTP character ${index + 1}"]`,{timeout:10000}).type(digit);
+                cy.get(`[aria-label="Please enter OTP character ${index + 1}"]`,{timeout:1000}).type(digit);
                 });
                 cy.url().should('include', 'https://raphacure.com/doctor');
             cy.wait(2000); // allow initial load
