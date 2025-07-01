@@ -42,10 +42,7 @@ describe('Doctor Consultation Specialization', () => {
 
 
     cy.get('.allDocList').should('be.visible');
-    // Verify that the doctor list is not empty
-    // cy.get('.allDocList').should('have.length.greaterThan', 0);
-    // Verify that the doctor list contains 9 doctors
-    // cy.get('.allDocList > div').should('have.length',3);
+   
     cy.get('.allDocList > div').then(($divs) => {
         const doctorCount = $divs.length;
         expect(doctorCount).to.be.greaterThan(0); // Ensure there is at least one doctor
