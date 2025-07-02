@@ -60,10 +60,10 @@ describe('Doctor Consultation Search and Booking', () => {
               cy.wrap($buttons[randomIndex]).click({force: true});
             });
             cy.wait(5000)  // optional
-            cy.get('.pay-proceed', { timeout: 10000 }).should('be.visible').click()
+            // cy.get('.pay-proceed', { timeout: 10000 }).should('be.visible').click()
 
           // Step 6: Proceed to Checkout
-          // cy.get('.pay-proceed').should('be.visible').click();
+          cy.get('.pay-proceed').should('be.visible').click();
           
           cy.url().should('include', '/checkout');
           // Optional: PhonePe payment test (mock or conditionally check)
