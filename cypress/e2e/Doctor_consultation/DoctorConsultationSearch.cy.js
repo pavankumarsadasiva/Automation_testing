@@ -146,7 +146,7 @@ describe('Doctor Consultation Search and Booking', () => {
       cy.get(`[aria-label="Please enter OTP character ${index + 1}"]`, { timeout: 10000 }).type(digit);
     });
 
-    cy.url({ timeout: 20000 }).should('include', '/doctor');
+    cy.url({ timeout: 2000 }).should('include', '/doctor');
     
     // Wait for search input to load
     cy.get('.search-input', { timeout: 15000 }).should('be.visible').type('Naveen Gowda');
