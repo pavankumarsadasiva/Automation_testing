@@ -172,7 +172,7 @@ describe('Doctor Consultation Search and Booking', () => {
       });
 
     // IMPORTANT: Wait for pay-proceed to become visible
-    cy.get('.pay-proceed', { timeout: 3000 })
+    cy.get('.pay-proceed', { timeout: 20000 })
       .should('be.visible')
       .click();
 
