@@ -186,12 +186,21 @@ describe('Doctor Consultation Search and Booking', () => {
       .should('be.visible');
 
     // Interact with iframe
-    cy.get('iframe')
-      .its('0.contentDocument.body').should('not.be.empty')
-      .then(cy.wrap)
-      .find('button[data-testid="checkout-close"]', { timeout: 10000 })
-      .should('be.visible')
-      .click();
+    // cy.get('iframe')
+    //   .its('0.contentDocument.body').should('not.be.empty')
+    //   .then(cy.wrap)
+    //   .find('button[data-testid="checkout-close"]', { timeout: 10000 })
+    //   .should('be.visible')
+    //   .click();
+    cy.get('iframe', { timeout: 20000 })
+        .its('0.contentDocument.body').should('not.be.empty')
+        .then(cy.wrap)
+        .within(() => {
+          cy.get('button[data-testid="checkout-close"]', { timeout: 10000 })
+            .should('be.visible')
+            .click();
+    });
+
 
     cy.get('iframe')
       .its('0.contentDocument.body').should('not.be.empty')
