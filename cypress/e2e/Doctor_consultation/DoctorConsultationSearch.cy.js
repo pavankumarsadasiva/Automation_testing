@@ -172,11 +172,11 @@ describe('Doctor Consultation Search and Booking', () => {
       });
 
     // IMPORTANT: Wait for pay-proceed to become visible
-    cy.get('.pay-proceed', { timeout: 30000 })
+    cy.get('.pay-proceed', { timeout: 3000 })
       .should('be.visible')
       .click();
 
-    cy.url({ timeout: 30000 }).should('include', '/checkout');
+    cy.url({ timeout: 3000 }).should('include', '/checkout');
 
     // Click payment button
     cy.get('.checkout-pay-buttom.checkout-btn-blue button', { timeout: 20000 }).first().click();
