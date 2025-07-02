@@ -201,7 +201,8 @@ describe('Doctor Consultation Search and Booking', () => {
             .click();
     });
 
-
+    
+      cy.wait(1000);
     cy.get('iframe')
       .its('0.contentDocument.body').should('not.be.empty')
       .then(cy.wrap)
