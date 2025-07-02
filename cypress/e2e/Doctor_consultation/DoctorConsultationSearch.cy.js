@@ -157,6 +157,7 @@ describe('Doctor Consultation Search and Booking', () => {
     cy.contains('.search-popup-name', 'Naveen Gowda', { timeout: 20000 }).click();
 
     cy.url({ timeout: 20000 }).should('include', '/doctor/doctordetails/');
+    cy.wait(3000); // allow time for page to load
 
     // Choose Booking Options
     cy.get('#virtual-types-list1', { timeout: 10000 }).check().should('be.checked');
