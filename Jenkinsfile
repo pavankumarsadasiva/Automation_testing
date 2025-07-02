@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Run DoctorConsultationSearch File Tests') {
             steps {
-                 bat 'npx cypress run --spec "cypress/e2e/Doctor_consultation/DoctorConsultationSearch.cy.js"'
+                bat 'npm run test-doctor-consultation'
 
 
             }

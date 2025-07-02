@@ -7,6 +7,7 @@
     "cypress-xpath": "^2.0.1"
   },
   "scripts": {
-    "start": "npx cypress run"
+    "start": "npx cypress run",
+    "test-doctor-consultation": "npx cypress run --spec \"cypress/e2e/Doctor_consultation/DoctorConsultationSearch.cy.js\""
   }
 }
