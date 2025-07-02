@@ -13,11 +13,12 @@ describe('Doctor Consultation Search and Booking', () => {
                     return `5${month}${day}3`; // e.g., '506253'
                     }
             const otp = generateOTP().split('');
-             before(() => {
-                cy.visit('https://raphacure.com/doctor');
-            });
+            //  before(() => {
+            //     cy.visit('https://raphacure.com/doctor');
+            // });
 
         it('Searching for a doctor', () => {
+             cy.visit('https://raphacure.com/doctor');
              cy.contains('Login').click();
                 cy.get('.input-phone-box').type(phoneNumber);
                 cy.get('#checkboxaggrews').check(); 
