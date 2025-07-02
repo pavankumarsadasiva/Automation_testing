@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Run DoctorConsultationSearch File Tests') {
             steps {
-                bat 'npm run test-doctor-consultation'
+                bat 'npm run test-doctor-consultation-Booking'
 
 
             }
