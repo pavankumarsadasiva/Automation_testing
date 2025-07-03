@@ -72,7 +72,7 @@ describe('Doctor Consultation Search and Booking', () => {
 
           //  cy.get('.checkout-pay-buttom.phonePe button').click();
             cy.get('.checkout-pay-buttom.checkout-btn-blue button').first().click();
-
+            cy.wait(2000); // Wait for the payment options to load
             cy.get('iframe[class*="razorpay-checkout-frame"]', { timeout: 10000 })
               .should('be.visible')
               .then($iframe => {
