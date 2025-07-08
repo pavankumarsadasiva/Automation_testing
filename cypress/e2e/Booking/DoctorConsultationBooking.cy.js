@@ -19,8 +19,8 @@ describe('Doctor Consultation Search and Booking', () => {
 
         it('Searching for a doctor', () => {
              cy.visit('https://raphacure.com/doctor');
-             cy.contains('Login').click();
-                cy.get('.input-phone-box').type(phoneNumber);
+             cy.contains('Login').invoke('css', 'border', 'red').click();
+                cy.get('.input-phone-box').invoke('css', 'border', 'red').type(phoneNumber);
                 cy.get('#checkboxaggrews').check(); 
                 cy.get('.proceed-btn button').should('not.be.disabled').click();
 
